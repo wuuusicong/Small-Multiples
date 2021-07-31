@@ -1,9 +1,11 @@
-import React,{Component} from "react";
+import React,{Component, useState, useEffect} from "react";
 import ColorRectContainer from "./ColorRect/ColorRectContainer";
 import MapContainer from "./MapCountainer";
 import * as d3 from "d3";
 import emitter from "../event";
 import './MapSmallMultiples.less'
+import Content from "../Content";
+import Panel from "popo-react-panel";
 
 class MapSmallMultiples extends Component{
     constructor(props) {
@@ -50,16 +52,28 @@ class MapSmallMultiples extends Component{
     componentDidMount() {
     }
     render() {
+        const style1 = {
+            height:'5%'
+        }
         return(
-            <div className="div_small_layout">
-                <MapContainer colorInterpolate = {this.state.colorGradient}/>
-                {/*<ColorRectContainer*/}
-                {/*    colorGradient = {this.state.colorGradient}*/}
-                {/*    colorAll = {this.state.colorAll}*/}
-                {/*    colorBar="dependentBar"*/}
-                {/*    num={this.state.num}*/}
-                {/*    colorChange = {this.colorChange}*/}
-                {/*/>*/}
+            <div className="Panel3Container">
+                <div className="VisContainer">
+                    <div className="div_small_layout">
+                        <MapContainer colorInterpolate = {this.state.colorGradient}/>
+                        {/*<ColorRectContainer*/}
+                        {/*    colorGradient = {this.state.colorGradient}*/}
+                        {/*    colorAll = {this.state.colorAll}*/}
+                        {/*    colorBar="dependentBar"*/}
+                        {/*    num={this.state.num}*/}
+                        {/*    colorChange = {this.colorChange}*/}
+                        {/*/>*/}
+                        {/*<div style={style1}>*/}
+                        {/*    1213*/}
+                        {/*</div>*/}
+                    </div>
+                </div>
+                <div className="MappingContainer">
+                </div>
             </div>
         )
     }

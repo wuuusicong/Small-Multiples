@@ -17,16 +17,17 @@ class LayoutContainer extends Component{
         console.log(this.state);
         const layout = P.init({
             container:'container',
-            rows:24,
+            rows:12,
             cols:24,
             layout: [
-                [24,[[8,[2,11,11]],[16]]]
+                // [24,[[8,[2,11,11]],[16]]],
+                [1],[11,[2,22]]
             ],
             dev:{
                 enable:true,
                 panel:{
                     enable: true,
-                    // background:'#ccc'
+                    background:'#ccc'
                 },
                 guideline:{
                     // show: true
